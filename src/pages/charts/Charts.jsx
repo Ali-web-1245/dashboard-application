@@ -17,7 +17,7 @@ import {
 } from 'recharts';
 import { FiChevronDown, FiSettings } from 'react-icons/fi';
 import { useTheme } from '../../context/ThemeContext';
-import './Charts.css';
+import './charts.css';
 
 // Datasets for Time Range Filter
 const chartDataByPeriod = {

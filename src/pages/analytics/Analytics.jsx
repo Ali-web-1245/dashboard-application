@@ -13,7 +13,7 @@ import {
 } from 'react-icons/bs';
 import { FaFacebookF, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { ResponsiveContainer, LineChart, Line, Tooltip } from 'recharts';
-import './Analytics.css';
+import './analytics.css';
 
 // Dynamic Data Arrays
 const marketShareStats = [

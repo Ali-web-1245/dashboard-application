@@ -12,7 +12,7 @@ import {
   FiSettings 
 } from 'react-icons/fi';
 import { useTheme } from '../../context/ThemeContext';
-import './Blog.css';
+import './blog.css';
 
 // Initial Posts matching the reference screenshot exactly
 const initialPostsData = [

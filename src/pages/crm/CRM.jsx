@@ -12,7 +12,7 @@ import {
   FiSettings 
 } from 'react-icons/fi';
 import { useTheme } from '../../context/ThemeContext';
-import './CRM.css';
+import './crm.css';
 
 // Initial Customer Data matching the provided reference screenshot exactly
 const initialCustomersData = [
