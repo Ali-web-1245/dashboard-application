@@ -1,0 +1,513 @@
+.dashboard-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* TOP CARDS GRID */
+.top-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+
+.summary-card {
+  position: relative;
+  background-color: var(--bg-card);
+  border-radius: 12px;
+  padding: 24px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* 1. Earning Card Specifics */
+.earning-card {
+  background: linear-gradient(135deg, #4527a0 0%, #311b92 100%);
+  color: #fff;
+}
+
+.card-bg-shape {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.purple-shape-1 {
+  width: 210px;
+  height: 210px;
+  background: rgba(255, 255, 255, 0.05);
+  top: -80px;
+  right: -50px;
+}
+
+.purple-shape-2 {
+  width: 210px;
+  height: 210px;
+  background: rgba(255, 255, 255, 0.08);
+  bottom: -110px;
+  right: -20px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.icon-wrapper {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.purple-icon {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.blue-icon {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.blue-icon-solid {
+  background: #1e88e5;
+  color: #fff;
+}
+
+.gold-icon {
+  background: rgba(255, 193, 7, 0.15);
+  color: #ffc107;
+}
+
+.icon-btn {
+  color: rgba(255, 255, 255, 0.8);
+  padding: 6px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.icon-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.value-trend {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-value {
+  font-size: 1.85rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.trend-circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trend-circle.down {
+  background: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+}
+
+.card-title {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 4px;
+}
+
+/* 2. Order Card Specifics */
+.order-card {
+  background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+  color: #fff;
+}
+
+.blue-shape {
+  width: 250px;
+  height: 250px;
+  background: rgba(255, 255, 255, 0.05);
+  top: -100px;
+  right: -60px;
+}
+
+.period-toggle {
+  display: flex;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  padding: 3px;
+}
+
+.toggle-btn {
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.toggle-btn.active {
+  background: #1e88e5;
+  color: #fff;
+  font-weight: 600;
+}
+
+.order-card-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-end;
+}
+
+.sparkline-container {
+  height: 50px;
+}
+
+/* 3. Stacked Income Cards */
+.income-stacked-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.income-card {
+  padding: 18px 20px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.primary-income {
+  background: #1e88e5;
+  color: #fff;
+}
+
+.dark-income {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+}
+
+.dark-glow {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(255,193,7,0.1) 0%, rgba(0,0,0,0) 70%);
+  right: -20px;
+  bottom: -20px;
+}
+
+.income-card-inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.income-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.income-title {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.primary-income .income-title {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* MAIN DASHBOARD GRID */
+.main-dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+.dashboard-box {
+  background-color: var(--bg-card);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--border-color);
+}
+
+.box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.box-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.box-main-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.growth-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Custom Dropdown Filter */
+.custom-select-container {
+  position: relative;
+}
+
+.select-btn {
+  background: #111936;
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.select-menu {
+  position: absolute;
+  top: 105%;
+  right: 0;
+  background: #111936;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 10;
+  width: 120px;
+}
+
+.select-item {
+  padding: 8px 12px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: background 0.2s;
+}
+
+.select-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+.grid-menu-btn {
+  background: #111936;
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  padding: 6px 8px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Menu Dropdown Generic */
+.menu-dropdown-container {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 110%;
+  background: #111936;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  min-width: 130px;
+}
+
+.dropdown-menu button {
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  transition: all 0.2s;
+}
+
+.dropdown-menu button:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+/* POPULAR STOCKS SECTION */
+.stocks-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.icon-btn-muted {
+  color: var(--text-muted);
+}
+
+.featured-stock-card {
+  background: #d1c4e9;
+  border-radius: 10px;
+  padding: 16px;
+  color: #311b92;
+  margin-bottom: 20px;
+}
+
+.featured-stock-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.featured-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.featured-tag {
+  font-size: 0.75rem;
+  color: #5e35b1;
+}
+
+.featured-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.featured-chart-wrapper {
+  margin-top: 10px;
+}
+
+.stocks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stock-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.stock-item:last-child {
+  border-bottom: none;
+}
+
+.stock-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.stock-status {
+  font-size: 0.75rem;
+  display: block;
+  margin-top: 2px;
+}
+
+.stock-status.profit {
+  color: #00e676;
+}
+
+.stock-status.loss {
+  color: #ff5252;
+}
+
+.stock-price-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stock-price {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.indicator-badge {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.indicator-badge.profit {
+  background: rgba(0, 230, 118, 0.15);
+  color: #00e676;
+}
+
+.indicator-badge.loss {
+  background: rgba(255, 82, 82, 0.15);
+  color: #ff5252;
+}
+
+.stocks-footer {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.view-all-btn {
+  color: #1e88e5;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: gap 0.2s;
+}
+
+.view-all-btn:hover {
+  gap: 8px;
+}
+
+/* RESPONSIVE DESIGN BREAKPOINTS */
+@media (max-width: 1024px) {
+  .top-cards-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .income-stacked-cards {
+    grid-column: span 2;
+    flex-direction: row;
+  }
+  .main-dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .top-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .income-stacked-cards {
+    grid-column: span 1;
+    flex-direction: column;
+  }
+  .dashboard-container {
+    padding: 14px;
+  }
+}
+

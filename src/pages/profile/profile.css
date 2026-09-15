@@ -1,0 +1,24 @@
+.profile-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: var(--text-primary);
+}
+
+.profile-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 24px;
+  max-width: 500px;
+}
+
+.profile-subtitle {
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.profile-detail {
+  margin-top: 8px;
+  color: var(--text-secondary);
+}

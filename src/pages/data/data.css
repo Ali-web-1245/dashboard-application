@@ -1,0 +1,462 @@
+/* Container & Main Layout */
+.data-page-container {
+  width: 100%;
+  color: var(--text-secondary);
+  font-family: inherit;
+  position: relative;
+  padding-bottom: 30px;
+}
+
+/* Header Section */
+.data-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.data-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.data-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+/* Add Record Button */
+.add-record-btn {
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.add-record-btn:hover {
+  opacity: 0.9;
+}
+
+/* Main Table Card */
+.data-table-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.table-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.table-card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.table-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Search Box */
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  color: var(--text-secondary);
+  pointer-events: none;
+}
+
+.search-input {
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-primary);
+  padding: 8px 14px 8px 34px;
+  font-size: 0.8rem;
+  width: 220px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: var(--accent-color);
+}
+
+.search-input::placeholder {
+  color: var(--text-secondary);
+}
+
+/* Dropdown Filters */
+.filter-dropdown-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.filter-dropdown {
+  appearance: none;
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-primary);
+  padding: 8px 30px 8px 14px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.dropdown-arrow {
+  position: absolute;
+  right: 10px;
+  color: var(--text-secondary);
+  pointer-events: none;
+}
+
+/* Table Design */
+.table-responsive-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.data-table th {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  padding: 14px 12px;
+  border-bottom: 1px solid var(--border-color);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.data-table td {
+  font-size: 0.82rem;
+  padding: 18px 12px;
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: middle;
+}
+
+.th-id, .td-id {
+  color: var(--text-secondary);
+  width: 50px;
+}
+
+.product-name {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Category Badges / Pills */
+.category-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  background-color: rgba(139, 92, 246, 0.15);
+  color: #c084fc;
+}
+
+.region-cell, .date-cell, .qty-cell {
+  color: var(--text-secondary);
+}
+
+.revenue-cell {
+  color: #10b981;
+  font-weight: 600;
+}
+
+/* Action Buttons */
+.th-actions, .td-actions {
+  text-align: right;
+}
+
+.action-icon-btn {
+  background-color: var(--bg-button, rgba(255, 255, 255, 0.03));
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 6px;
+  transition: all 0.2s ease;
+}
+
+.edit-btn {
+  color: var(--text-secondary);
+}
+
+.edit-btn:hover {
+  color: var(--text-primary);
+  background-color: var(--bg-button-hover, rgba(255, 255, 255, 0.1));
+}
+
+.delete-btn {
+  color: #ef4444;
+}
+
+.delete-btn:hover {
+  background-color: rgba(239, 68, 68, 0.15);
+}
+
+.no-data-cell {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 40px;
+}
+
+/* Table Footer & Pagination */
+.table-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  font-size: 0.78rem;
+}
+
+.pagination-info {
+  color: var(--text-secondary);
+}
+
+.pagination-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.page-btn {
+  background-color: var(--bg-button, rgba(255, 255, 255, 0.03));
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.page-btn.active {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #ffffff;
+}
+
+/* Modal Overlay & Styling */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.modal-content {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 460px;
+  padding: 22px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.modal-header h3 {
+  color: var(--text-primary);
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.modal-close-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.form-group label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.form-group input, 
+.form-group select {
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  color: var(--text-primary);
+  padding: 8px 12px;
+  font-size: 0.8rem;
+  outline: none;
+}
+
+.form-group input.input-error {
+  border-color: #ef4444;
+}
+
+.error-text {
+  font-size: 0.7rem;
+  color: #ef4444;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-cancel {
+  background-color: var(--bg-button, rgba(255, 255, 255, 0.05));
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 8px 14px;
+  border-radius: 5px;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.btn-submit {
+  background-color: var(--accent-color);
+  border: none;
+  color: #ffffff;
+  padding: 8px 14px;
+  border-radius: 5px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-danger {
+  background-color: #ef4444;
+  border: none;
+  color: #ffffff;
+  padding: 8px 14px;
+  border-radius: 5px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.confirm-modal h3 {
+  color: var(--text-primary);
+  margin-top: 0;
+}
+
+.confirm-modal p {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+/* Floating Settings Button */
+.floating-settings-btn {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--accent-color);
+  color: #ffffff;
+  border: none;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 99;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .table-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .table-controls {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-input-wrapper, 
+  .search-input, 
+  .filter-dropdown-wrapper, 
+  .filter-dropdown {
+    width: 100%;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .data-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}

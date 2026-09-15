@@ -1,0 +1,220 @@
+/* Container */
+.charts-page-container {
+  width: 100%;
+  color: var(--text-secondary);
+  font-family: inherit;
+  position: relative;
+  padding-bottom: 30px;
+}
+
+/* Page Header */
+.charts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.charts-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.charts-subtitle {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin: 4px 0 0 0;
+}
+
+/* Dropdown */
+.period-dropdown-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.period-dropdown {
+  appearance: none;
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 6px 32px 6px 14px;
+  font-size: 0.78rem;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.period-dropdown:hover {
+  border-color: var(--accent-color);
+}
+
+.dropdown-arrow {
+  position: absolute;
+  right: 10px;
+  pointer-events: none;
+  color: var(--text-secondary);
+}
+
+/* 2x2 Grid Layout */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+/* Base Chart Card */
+.chart-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  margin-bottom: 12px;
+}
+
+.card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.card-subtitle {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  display: block;
+  margin-top: 2px;
+}
+
+.chart-wrapper {
+  width: 100%;
+}
+
+/* Custom Bottom Legends */
+.chart-custom-legend {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 8px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot.cyan { background-color: #06b6d4; }
+.dot.purple { background-color: #8b5cf6; }
+
+/* Donut Chart Card Content Layout */
+.donut-card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.donut-wrapper {
+  width: 55%;
+}
+
+.category-legend-list {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-right: 10px;
+}
+
+.category-legend-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.78rem;
+}
+
+.cat-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cat-color-box {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.cat-name {
+  color: var(--text-secondary);
+}
+
+.cat-val {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Floating Settings Button */
+.floating-settings-btn {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--accent-color);
+  color: #ffffff;
+  border: none;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+  z-index: 99;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .charts-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .donut-card-content {
+    flex-direction: column;
+  }
+
+  .donut-wrapper {
+    width: 100%;
+  }
+
+  .category-legend-list {
+    width: 100%;
+    margin-top: 12px;
+    padding-right: 0;
+  }
+}

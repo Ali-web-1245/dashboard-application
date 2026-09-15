@@ -1,0 +1,348 @@
+/* Container Layout */
+.analytics-container {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 20px;
+  width: 100%;
+  color: var(--text-secondary);
+  font-family: inherit;
+}
+
+.analytics-left-col,
+.analytics-right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Common Card Rules */
+.analytics-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Typography Headings */
+.card-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.card-subheading {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin: 4px 0 0 0;
+}
+
+/* 1. Market Share Card */
+.market-share-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.market-share-total {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #ef4444;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.trend-down-icon {
+  font-size: 1.2rem;
+}
+
+.market-share-filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.share-filter-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.share-filter-badge.positive {
+  color: #93c5fd;
+}
+
+.share-filter-badge.negative {
+  color: #93c5fd;
+}
+
+.badge-icon {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.market-share-chart-wrapper {
+  margin-top: 10px;
+  margin-left: -15px;
+  margin-right: -10px;
+}
+
+/* 2 & 3. Banner Cards (Revenue & Orders Received) */
+.cards-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.banner-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  min-height: 110px;
+  color: #ffffff;
+}
+
+.purple-banner {
+  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+}
+
+.blue-banner {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.banner-title {
+  font-size: 0.875rem;
+  opacity: 0.9;
+  margin-bottom: 6px;
+}
+
+.banner-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.banner-subtext {
+  font-size: 0.75rem;
+  opacity: 0.8;
+  margin-top: 4px;
+}
+
+.banner-icon-bg {
+  position: absolute;
+  right: -10px;
+  bottom: -15px;
+  font-size: 6rem;
+  opacity: 0.2;
+  color: #ffffff;
+  pointer-events: none;
+  display: flex;
+}
+
+/* 4. Latest Customers Table */
+.customers-heading {
+  margin-bottom: 16px;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.customers-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.customers-table th {
+  text-align: left;
+  color: var(--text-secondary);
+  font-weight: 500;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.customers-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+.customers-table .flag-cell {
+  font-size: 1.1rem;
+  width: 40px;
+}
+
+.customers-table .name-cell {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.customers-table .text-right {
+  text-align: right;
+}
+
+.customers-footer {
+  text-align: right;
+  margin-top: 14px;
+}
+
+.view-all-link {
+  font-size: 0.8rem;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.view-all-link:hover {
+  text-decoration: underline;
+}
+
+/* 5. Right Top Statistics Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.stat-grid-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 14px;
+}
+
+.stat-icon-wrapper {
+  color: #2563eb;
+  font-size: 1.3rem;
+  display: flex;
+}
+
+.stat-text-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-count {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.5px;
+}
+
+/* 6. Total Revenue Crypto List */
+.revenue-heading {
+  margin-bottom: 16px;
+}
+
+.revenue-list {
+  display: flex;
+  flex-direction: column;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.revenue-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.85rem;
+}
+
+.revenue-item:last-child {
+  border-bottom: none;
+}
+
+.revenue-item-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-primary);
+}
+
+.caret-icon {
+  font-size: 0.7rem;
+}
+
+.caret-icon.profit {
+  color: #10b981;
+}
+
+.caret-icon.loss {
+  color: #ef4444;
+}
+
+.revenue-item-val.profit {
+  color: #10b981;
+}
+
+.revenue-item-val.loss {
+  color: #ef4444;
+}
+
+/* 7 & 8. Daily User & Page View Cards */
+.daily-card {
+  min-height: 90px;
+  padding: 16px 20px;
+}
+
+.banner-value-large {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.banner-title-small {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+.large-icon {
+  font-size: 4.5rem;
+  right: -5px;
+  bottom: -10px;
+}
+
+/* Responsive Rules */
+@media (max-width: 1024px) {
+  .analytics-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .cards-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,50 @@
+:root {
+  /* Dark mode (default) */
+  --bg-primary: #0e1330;
+  --bg-secondary: #1a2145;
+  --bg-card: #1c2347;
+  --text-primary: #ffffff;
+  --text-secondary: #8f97b8;
+  --border-color: #28335e;
+
+  /* Navbar-specific variables */
+  --bg-navbar: #0e1330;
+  --bg-button: #1a2145;
+  --bg-button-hover: #232c56;
+  --bg-input: #161c3f;
+  --dropdown-bg: #161c3f;
+  --transition-fast: 0.2s ease;
+
+  /* Accent color - changed dynamically via data-accent */
+  --accent-color: #8b5cf6;
+  --accent: #8b5cf6;
+}
+
+/* Light mode override */
+[data-theme="light"] {
+  --bg-primary: #f4f5fa;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --text-primary: #1a1a2e;
+  --text-secondary: #5d6994;
+  --border-color: #e0e0e0;
+
+  --bg-navbar: #ffffff;
+  --bg-button: #f4f5fa;
+  --bg-button-hover: #e9eaf5;
+  --bg-input: #f4f5fa;
+  --dropdown-bg: #ffffff;
+}
+
+/* Accent color overrides */
+[data-accent="blue"]   { --accent-color: #3b82f6; --accent: #3b82f6; }
+[data-accent="purple"] { --accent-color: #8b5cf6; --accent: #8b5cf6; }
+[data-accent="green"]  { --accent-color: #10b981; --accent: #10b981; }
+[data-accent="orange"] { --accent-color: #f97316; --accent: #f97316; }
+[data-accent="red"]    { --accent-color: #ef4444; --accent: #ef4444; }
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
